@@ -1,0 +1,71 @@
+<form [formGroup]="service.form" class="normal-form">
+
+    <mat-grid-list cols="4" rowHeight="550px">
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <div class="controles-container">
+                <input type="hidden" formControlName="$key">
+                <mat-form-field>
+                    <input matInput placeholder="First Name*">
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Last Name*">
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Address*">
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="email" matInput placeholder="Email">
+                    <mat-error>Invalid email address.</mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input type="password" matInput placeholder="Password">
+                    <br>
+
+                </mat-form-field>
+
+
+                <div class="add-bottom-padding">
+
+
+                    <label>Gender:</label>
+                    <br>
+                    <br>
+
+                    <mat-radio-group formControlName="gender">
+                        <mat-radio-button value="1">Male</mat-radio-button>
+                        <mat-radio-button value="2">Female</mat-radio-button>
+                        <mat-radio-button value="3">Other</mat-radio-button>
+                    </mat-radio-group>
+
+                </div>
+
+                <mat-form-field>
+                    <input formControlName="hireDate" matInput [matDatepicker]="picker" placeholder="Date of Birth">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+                <div class="button-row">
+
+                    <br>
+                    <button mat-raised-button color="primary" type="submit">REGISTER</button>
+
+                </div>
+
+            </div>
+
+
+
+        </mat-grid-tile>
+    </mat-grid-list>
+
+
+
+
+
+
+</form>
